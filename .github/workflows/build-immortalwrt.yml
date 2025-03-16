@@ -22,7 +22,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    if: github.event.repository.owner.id == github.event.sender.id
+    # 移除条件检查，允许任何人触发工作流
+    # if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
     - name: Checkout
